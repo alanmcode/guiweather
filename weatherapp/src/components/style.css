@@ -1,0 +1,408 @@
+/* overall format for the app, defines universal fonts, borders etc to be consistent for all pages */
+#container {
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Segoe UI;
+  font-weight: bold;
+  border: 2px solid black;
+  width: 454px;
+  height: 825px;
+}
+
+/* css to format api data for the app*/
+.MainInfo {
+  width: 90%;
+  background-color: #224ec8;
+  border-radius: 10%;
+  color: white;
+  padding: 0.5%;
+  margin: auto;
+  margin-bottom: 1em;
+  height: 21em;
+}
+
+/* defines margins for the celsius farenheit button*/
+#celsiusfahrenheitbtn {
+  margin-left: 30px;
+}
+
+/* positions the location from api */
+.Location {
+  position: relative;
+}
+
+/* css format for the city from api data */
+#locationCity {
+  position: relative;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 140%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  bottom: 0%;
+}
+
+/* css format for the time from device */
+#locationTime {
+  position: absolute;
+  top: 40%;
+  padding-bottom: 10%;
+  text-align: left;
+  padding-left: 15%;
+  font-size: 100%;
+  margin-bottom: 0;
+}
+
+/* the temperature for location from api */
+#maintemp {
+  display: inline-block;
+  font-size: 100%;
+  font-size: 3.4em;
+  position: absolute;
+  bottom: 0.9em;
+  right: 1em;
+}
+
+/* image icon that visualises maintemp in homepage */
+.weatherIcon {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* format text for where it describes the weather */
+#iconDescription img {
+  position: relative;
+  bottom: 1.5em;
+  padding-right: 15em;
+  width: 40%;
+  height: auto;
+  margin-bottom: 0.4em;
+}
+
+/* figure caption for image weatherDesc */
+#weather-caption {
+  font-size: 1.7em;
+  bottom: 2em;
+  right: 3.6em;
+  position: relative;
+}
+
+/* temperature data for hi and lo under main temp */
+#hilotemp span {
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0em;
+  top: 5em;
+}
+
+/* markup for hilotemp */
+#hilotemp {
+  right: 4em;
+}
+
+/* span temperature data for main */
+#maintemp span {
+  font-size: 1.5em;
+  display: inline-flex;
+}
+
+/* css format for all weather data from api under the main temp */
+.WeatherData {
+  position: relative;
+  bottom: 3.2em;
+  width: 80%;
+  margin-left: 2em;
+}
+
+/* css for row data under main temp */
+.data {
+  font-size: 1.1em;
+}
+
+/* css for react attributes */
+.attribute td {
+  padding-left: 2.6em;
+  font-size: 0.6em;
+}
+
+/* additional attribute styles */
+.attribute {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* css sections containing temp data (d1) and perfect weather (d3) as part of the design */
+#d3 h3 {
+  padding-top: 0.5em;
+}
+
+/* css concerning the summary box (first blue box) */
+#d1 {
+  padding: 0.1em;
+  background-color: #224ec8;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  margin: auto;
+  width: 93.7%;
+  margin-top: 1em;
+  position: relative;
+}
+
+/* css concerning the perfect weather system (third/bottom blue box) */
+#d3 {
+  height: 9.2em;
+  background-color: #224ec8;
+  text-align: center;
+  color: white;
+  border-radius: 30px;
+  margin: auto;
+  margin-bottom: 2em;
+  width: 92%;
+  position: relative;
+}
+
+/* additional info in section containing temp data */
+#d1otherinfo {
+  margin: 0 auto;
+}
+
+/* table of temp data under main temp that shows humidity etc */
+#d1 table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* markup padding for section */
+#d1 td,
+#d1 tr {
+  padding-right: 20px;
+}
+
+/* links to postcode and home */
+.links {
+  padding-right: 10px;
+}
+
+/* markup margin for section */
+#d1 hr {
+  margin: 0 30px;
+}
+
+/* css concerning the 5 day weather forecast (second light blue box)*/
+#d2 {
+  background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+  text-align: center;
+  border-radius: 30px;
+  height: 145px;
+  width: 90.7%;
+  margin-left: 20px;
+}
+
+/* css section for entering postcode, similar styles used in postcode page */
+#d2postcode {
+  width: 90%;
+  background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+  text-align: center;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 1em;
+  padding: 8px;
+}
+
+/* css for postcode search bar */
+#locationInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* css for input within postcode bar */
+#locationInput input {
+  margin: 0;
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+
+/* markup for search button in postcode page */
+#locationInput button {
+  margin: 0 auto;
+}
+
+/* text fixes for h3 and h4 text sizes in temp section */
+#d1 h3,
+h4 {
+  text-align: left;
+  margin-left: 8px;
+}
+
+/* markup for td */
+td {
+  margin-left: 100px;
+}
+
+/* clear line used with perfect weather states */
+#clear {
+  clear: both;
+}
+
+#day1 {
+  background-color: #1429e069;
+  border: 2px solid #a3b1e0;
+}
+
+/* items in the d2scontainer are entered */
+#d2sContainer {
+  margin: 0 auto;
+  position: relative;
+}
+
+/* all items in d2s are centere */
+.d2s * {
+  margin: 0 auto;
+}
+
+/* positioning for 5 day weather forecast */
+.d2stemp {
+  position: relative;
+  left: 7px;
+}
+
+/* margin fixes for 5 day weather forecast */
+.d2s {
+  margin: 10px 9px;
+
+  float: left;
+  border: 2px solid rgba(128, 128, 128, 0.733);
+  background-color: #bcd5f6;
+  height: 95px;
+  width: 30px;
+  border-radius: 25px;
+  padding: 13px 15px;
+}
+
+/* api images within 5 day forecast */
+.d2s img {
+  height: 60%;
+  width: auto;
+  position: relative;
+  left: -14px;
+}
+
+/* aligns all tables and data within tables as centred */
+table,
+td,
+tr {
+  text-align: center;
+}
+
+#Postdiv {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 15%;
+  margin-left: 35%;
+}
+
+/* formats all fieldset in all pages */
+fieldset {
+  width: 25em;
+  height: 5em;
+  border-style: double;
+  border-color: black;
+}
+
+/* formats margins for all labels and inputs*/
+label,
+input {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+/* container that fixes padding for all 3 perfect sports */
+#perfect {
+  padding-left: 50px;
+}
+
+/* secondary container for perfect sports */
+.perfectweather {
+  position: relative;
+  left: -13px;
+}
+
+/* formats hr*/
+hr {
+  position: relative;
+  bottom: 3.5em;
+  width: 86%;
+}
+
+/* formats the links to postcode and home */
+#links {
+  align-items: center;
+  background-color: #ccdff8;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+/* css formatting for all buttons */
+button {
+  align-items: center;
+  background-color: #0a66c2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
